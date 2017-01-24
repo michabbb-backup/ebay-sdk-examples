@@ -39,7 +39,7 @@ use \DTS\eBaySDK\BulkDataExchange\Types;
  * Create the service object.
  */
 $service = new Services\BulkDataExchangeService([
-    'credentials' => $config['production']['credentials'],
+    'credentials' => $config['sandbox']['credentials'],
     'authToken'   => $config['sandbox']['authToken'],
     'sandbox'     => true
 ]);
