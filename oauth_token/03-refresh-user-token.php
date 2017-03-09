@@ -47,7 +47,7 @@ $service = new Services\OAuthService([
  * Create the request object.
  */
 $request = new Types\RefreshUserTokenRestRequest();
-$request->refresh_token = 'v^1.1#i^1#f^0#p^3#I^3#r^1#t^Ul4yXzNBQkE2OEI3NzQ5QjQwQUU2RjBBOTYyNzBENzBCNEUwXzlfMSNFXjEyODQ=';
+$request->refresh_token = '<REFRESH TOKEN>';
 $request->scope = [
     'https://api.ebay.com/oauth/api_scope/sell.account',
     'https://api.ebay.com/oauth/api_scope/sell.inventory'
