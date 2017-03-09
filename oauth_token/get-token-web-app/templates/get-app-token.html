@@ -1,0 +1,17 @@
+{% extends "app.html" %}
+{% block content %}
+  <h1>Get App Token</h1>
+  <p>The eBay API returned the HTTP status code:<em>{{statusCode}}</em></p>
+  {% if statusCode == 200 %}
+    <p>Access Token</p>
+    <pre>{{accessToken}}</pre>
+    <p>Token Type</p>
+    <pre>{{tokenType}}</pre>
+    <p>Expires In</p>
+    <pre>{{expiresIn}}</pre>
+    <p>Refresh Token</p>
+    <pre>{{refreshToken}}</pre>
+  {% else %}
+    <p class="bg-danger">eBay returned the following error: {{error}} : {{errorDescription}}</p>
+  {% endif %}
+{% endblock %}

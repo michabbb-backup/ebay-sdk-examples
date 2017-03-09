@@ -1,0 +1,13 @@
+{% extends "app.html" %}
+{% block content %}
+  <h1>Auth Declined</h1>
+  <p>That's a shame.</p>
+  <p>State <em>This value was returned from the API and should match what was originally sent.</em></p>
+  <pre>{{state}}</pre>
+  <p>Error</p>
+  <pre>{{error}}</pre>
+  <p>Error Description</p>
+  <pre>{{errorDescription}}</pre>
+  <p>State</p>
+  <pre>{{state}}</pre>
+{% endblock %}

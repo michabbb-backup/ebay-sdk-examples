@@ -1,0 +1,21 @@
+{% extends "app.html" %}
+{% block content %}
+  <h1>Get User Token Accepted</h1>
+  <p>State <em>This value was returned from the API and should match what was originally sent.</em></p>
+  <pre>{{state}}</pre>
+  <p>Code <em>This value was sent to the API to be exchanged for an access token.</em></p>
+  <pre>{{code}}</pre>
+  <p>The eBay API returned the HTTP status code:<em>{{statusCode}}</em></p>
+  {% if statusCode == 200 %}
+    <p>Access Token</p>
+    <pre>{{accessToken}}</pre>
+    <p>Token Type</p>
+    <pre>{{tokenType}}</pre>
+    <p>Expires In</p>
+    <pre>{{expiresIn}}</pre>
+    <p>Refresh Token</p>
+    <pre>{{refreshToken}}</pre>
+  {% else %}
+    <p class="bg-danger">eBay returned the following error: {{error}} : {{errorDescription}}</p>
+  {% endif %}
+{% endblock %}

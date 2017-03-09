@@ -1,0 +1,7 @@
+{% extends "app.html" %}
+{% block content %}
+  <h1>Get User Token</h1>
+  <p>You will be re-directed to eBay to authorise the token. <a class="btn btn-primary" href="{{url}}" role="button">Generate token</a></p>
+  <p>State <em>This value should match the one sent back via the API.</em></p>
+  <pre>{{state}}</pre>
+{% endblock %}
