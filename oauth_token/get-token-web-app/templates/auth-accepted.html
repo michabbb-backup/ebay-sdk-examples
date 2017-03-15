@@ -15,6 +15,7 @@
     <pre>{{expiresIn}}</pre>
     <p>Refresh Token</p>
     <pre>{{refreshToken}}</pre>
+    <p><a class="btn btn-primary" href="/refresh-user-token?refresh-token={{refreshToken|url_encode}}" role="button">Use the above refresh token to generate a new token</a></p>
   {% else %}
     <p class="bg-danger">eBay returned the following error: {{error}} : {{errorDescription}}</p>
   {% endif %}
